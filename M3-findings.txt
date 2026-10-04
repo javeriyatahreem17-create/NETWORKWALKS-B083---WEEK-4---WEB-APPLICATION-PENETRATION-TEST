@@ -1,0 +1,106 @@
+M3 - DEEP RECON FINDINGS
+========================
+
+1. PDF METADATA
+---------------
+File:
+report3_open.pdf
+
+Author:
+j.malik
+
+Comments:
+DB backup moved to /old before site migration.
+
+Finding:
+The PDF metadata provided a clue about a database backup being moved to the /old/ directory.
+
+
+2. ROBOTS.TXT
+-------------
+The robots.txt file revealed the following restricted paths:
+
+/patient/
+/staff/
+/old/
+
+Important finding:
+The /old/ directory was specifically revealed through robots.txt.
+
+
+3. OLD DIRECTORY
+----------------
+URL:
+https://medirozahospital.com/old/
+
+Finding:
+The /old/ directory was accessible and exposed a database backup file.
+
+Database backup:
+mediroza_db_backup_2019.sql
+
+
+4. DATABASE BACKUP
+------------------
+File:
+mediroza_db_backup_2019.sql
+
+Finding:
+The exposed SQL backup contained confidential staff and shareholder records.
+
+
+5. STAFF INFORMATION
+--------------------
+Important record identified:
+
+Full name:
+Jameel Malik
+
+Job title:
+IT Systems Administrator
+
+Department:
+IT
+
+Email:
+j.malik@medirozahospital.com
+
+Monthly salary:
+ZAR 58,000
+
+
+6. SHAREHOLDER INFORMATION
+--------------------------
+The exposed database also contained shareholder information including:
+
+Dr. Rajesh Naidoo:
+18% - Ordinary
+
+Cedar Health Holdings (Pty) Ltd:
+15% - Ordinary
+
+Dr. Johan van der Merwe:
+12% - Ordinary
+
+Reddy Family Trust:
+11% - Ordinary
+
+Dr. Ahmed Kara:
+8% - Preferential
+
+The database contained additional shareholder records as well.
+
+
+7. CONNECTION BETWEEN THE FINDINGS
+----------------------------------
+The PDF metadata provided a clue about a database backup being moved to the /old/ directory.
+
+The robots.txt file independently revealed the /old/ directory.
+
+The /old/ directory exposed the database backup file.
+
+The database backup contained confidential staff and shareholder information.
+
+The staff database record identified Jameel Malik as an IT Systems Administrator, matching the j.malik clue found in the PDF metadata.
+
+This created a chain from publicly accessible information to sensitive internal organizational data.
